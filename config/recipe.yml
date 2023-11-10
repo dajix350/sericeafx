@@ -72,13 +72,8 @@ modules:
            - org.gnome.Loupe
            - org.mozilla.firefox
          remove:
-<<<<<<< HEAD
            - org.gnome.Cheese
 
-=======
-           - org.gnome.eog
-           - org.gnome.Cheese
->>>>>>> d354365 (maybe fix)
   #- type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
   #              #  will be installed and set up
   #  custom-flatpaks: # this section is optional
