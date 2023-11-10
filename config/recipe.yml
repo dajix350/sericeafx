@@ -28,6 +28,15 @@ modules:
       # - micro
       # - starship
       - swayfx
+      - imv
+      - light
+      - j4-dmenu-desktop
+      - waybar
+      - rofi
+      - dunst
+      - kanshi
+      - thunar
+      - swaylock
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
