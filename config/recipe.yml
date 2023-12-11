@@ -72,6 +72,7 @@ modules:
            - org.mozilla.firefox
          remove:
            - org.gnome.Cheese
+
   #- type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
   #              #  will be installed and set up
   #  custom-flatpaks: # this section is optional
