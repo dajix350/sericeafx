@@ -4,7 +4,7 @@ name: sericeafx-nvidia
 description: uBlue Serecia with SwayFX!
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/base-nvidia
+base-image: ghcr.io/ublue-os/sericea-nvidia
 image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -26,24 +26,26 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-39/swayfx-swayfx-fedora-39.repo
     install:
       - swayfx
-      - imv
-      - light
-      - j4-dmenu-desktop
-      - waybar
-      - rofi
-      - dunst
-      - kanshi
-      - thunar
-      - swaylock
-      - mpv
-      - blueman
-      - network-manager-applet
-      - greetd
-      - tuigreet
-      - pavucontrol
-      - wf-recorder
-      - zenity
+      # - imv
+      # - light
+      # - j4-dmenu-desktop
+      # - waybar
+      # - rofi
+      # - dunst
+      # - kanshi
+      # - thunar
+      # - swaylock
+      # - mpv
+      # - blueman
+      # - network-manager-applet
+      # - greetd
+      # - tuigreet
+      # - pavucontrol
+      # - wf-recorder
+      # - zenity
     remove:
+      - sway
+      - sway-config-fedora
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
@@ -83,7 +85,7 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-  - type: systemd
-    system:
-      enabled:
-        - greetd.service
+  # - type: systemd
+  #   system:
+  #     enabled:
+  #       - greetd.service
